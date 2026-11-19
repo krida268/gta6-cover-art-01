@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vice Light — Cover Studio</title>
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="brand">
+    <span class="brand-mark">VL</span>
+    <div>
+      <h1>Vice Light</h1>
+      <p>Cover Studio &middot; turn any photo into poster art</p>
+    </div>
+  </div>
+  <div class="top-actions">
+    <button id="undoBtn" type="button" title="Undo">&#8617; Undo</button>
+    <button id="redoBtn" type="button" title="Redo">&#8618; Redo</button>
+    <button id="sampleBtn" type="button" class="accent">Load sample photo</button>
+  </div>
+</header>
+
+<main class="workspace">
+  <section class="preview-col">
+    <div class="preview-frame" id="previewFrame">
+      <canvas id="previewCanvas" width="1080" height="1080"></canvas>
+      <div class="drop-hint" id="dropHint">Drop photos here &mdash; or use Add photos</div>
+    </div>
+    <p class="pan-hint" id="panHint">Click a panel to select it, then drag on the preview to move its photo &middot; scroll to zoom</p>
+    <div class="size-row" role="group" aria-label="Export size">
+      <span class="row-label">Export size</span>
+      <label><input type="radio" name="exportSize" value="1080x1080" checked> 1080 &times; 1080</label>
+      <label><input type="radio" name="exportSize" value="1080x1350"> 1080 &times; 1350</label>
+      <label><input type="radio" name="exportSize" value="1920x1080"> 1920 &times; 1080</label>
+    </div>
+    <div class="export-row">
+      <button id="exportSquareBtn" type="button" class="export-btn">Export square PNG</button>
+      <button id="exportPortraitBtn" type="button" class="export-btn">Export portrait PNG</button>
+      <button id="exportWideBtn" type="button" class="export-btn primary">Export wide PNG</button>
+    </div>
+    <p class="privacy-note">Photos never leave your machine &mdash; everything runs offline in this page.</p>
+  </section>
+
+  <aside class="controls-col">
+    <section class="panel-block">
+      <h2>1 &middot; Photos</h2>
+      <div class="photo-actions">
+        <label class="file-btn">Add photos
+          <input id="fileInput" type="file" accept="image/*" multiple hidden>
+        </label>
+        <span class="mini-note">or drag &amp; drop files onto the preview</span>
+      </div>
+      <div class="photo-tray" id="photoTray"></div>
+      <p class="mini-note">Click a photo, then click a panel in the preview to place it there. Drag a photo onto a panel to swap it in.</p>
+    </section>
+
+    <section class="panel-block">
+      <h2>2 &middot; Layout</h2>
+      <div class="choice-grid" id="layoutGrid"></div>
+    </section>
+
+    <section class="panel-block">
+      <h2>3 &middot; Colour grade</h2>
+      <div class="choice-grid grades" id="gradeGrid"></div>
+    </section>
+
+    <section class="panel-block">
+      <h2>4 &middot; Caption</h2>
+      <label class="field-label" for="captionInput">Title</label>
+      <input id="captionInput" type="text" maxlength="24" value="GOLDEN HOUR" autocomplete="off">
+      <label class="field-label" for="subtitleInput">Subtitle (neon script)</label>
+      <input id="subtitleInput" type="text" maxlength="48" value="chasing the last light" autocomplete="off">
+      <label class="field-label" for="badgeInput">Badge ribbon text</label>
+      <input id="badgeInput" type="text" maxlength="28" value="EST. 2026 &middot; VICE LIGHT" autocomplete="off">
+    </section>
+
+    <section class="panel-block">
+      <h2>5 &middot; Selected panel</h2>
+      <p class="selected-label" id="selectedPanelLabel">Panel 1 selected</p>
+      <label class="field-label" for="zoomSlider">Zoom</label>
+      <input id="zoomSlider" type="range" min="1" max="3" step="0.01" value="1.15">
+      <div class="panel-buttons">
+        <button id="flipBtn" type="button">Flip photo</button>
+        <button id="centerBtn" type="button">Centre photo</button>
+      </div>
+    </section>
+
+    <section class="panel-block">
+      <h2>6 &middot; Finish</h2>
+      <div class="toggle-row">
+        <label><input id="grainToggle" type="checkbox" checked> Film grain</label>
+        <label><input id="vignetteToggle" type="checkbox" checked> Vignette</label>
+        <label><input id="badgeToggle" type="checkbox" checked> Badge ribbon</label>
+        <label><input id="titleToggle" type="checkbox" checked> Title block</label>
+      </div>
+      <label class="field-label">Heat meter (stars)</label>
+      <div class="star-row" id="starRow" role="group" aria-label="Heat meter stars"></div>
+      <p class="mini-note">Five stars means a five-alarm cover. The meter prints on the exported PNG.</p>
+    </section>
+  </aside>
+</main>
+
+<footer class="foot">
+  <span>Vice Light Cover Studio &mdash; original art, no game artwork or fonts. Display type: Anton &amp; Pacifico, SIL Open Font License (see app/fonts/).</span>
+</footer>
+
+<script src="src/cover.js"></script>
+<script src="src/main.js"></script>
+<script src="src/shots.js"></script>
+</body>
+</html>
