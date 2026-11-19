@@ -1,8 +1,8 @@
 # Vice Light — Cover Studio
 
-[![Cover Art Maker](https://img.shields.io/badge/make.fun-bounty-ff5c8a)](https://make.fun/bounty/gta6-cover-art-01)
-[![Offline first](https://img.shields.io/badge/offline-no%20network-2de2c5)](https://make.fun/bounty/gta6-cover-art-01)
-[![Export PNG](https://img.shields.io/badge/export-1080%20%C2%B7%201350%20%C2%B7%201920-ffd166)](https://make.fun/bounty/gta6-cover-art-01)
+[![make.fun · gta6-cover-art-01](https://make.fun/badge/gta6-cover-art-01.svg)](https://make.fun/bounty/gta6-cover-art-01?utm_source=github&utm_medium=readme&utm_campaign=gta6-cover-art-01)
+[![rank](https://make.fun/badge/gta6-cover-art-01/krida268/gta6-cover-art-01/rank.svg)](https://make.fun/bounty/gta6-cover-art-01/leaderboard?utm_source=github&utm_medium=readme&utm_campaign=gta6-cover-art-01)
+[![reward](https://make.fun/badge/gta6-cover-art-01/krida268/gta6-cover-art-01/reward.svg)](https://make.fun/bounty/gta6-cover-art-01?utm_source=github&utm_medium=readme&utm_campaign=gta6-cover-art-01)
 
 Vice Light turns your own photos and a caption into GTA-poster-style cover art,
 right in the browser. No upload, no account, no network: photos are read on your
